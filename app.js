@@ -61,6 +61,10 @@ function ingresarPunto() {
     if (numeroActual.includes(".")) {
         return;
     }
+    if (numeroActual === "") {
+        input.value += "0"
+        return;
+    }
     input.value += ".";
 }
 
