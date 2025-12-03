@@ -58,6 +58,11 @@ function ingresarOperadores(operadores) {
 function ingresarPunto() {
     const partes = input.value.split(/[\+\-\×\/]/);
     const numeroActual = partes[partes.length - 1];
+    if (/[\+\-x/%]$/.test(input.value)) {
+        input.value += "0.";
+        return;
+    }
+    
     if (numeroActual.includes(".")) {
         return;
     }
